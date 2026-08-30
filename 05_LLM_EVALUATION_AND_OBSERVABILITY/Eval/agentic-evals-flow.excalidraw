@@ -1,0 +1,345 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "github-copilot",
+  "elements": [
+    {
+      "type": "text",
+      "id": "title",
+      "x": 330,
+      "y": 20,
+      "width": 540,
+      "height": 70,
+      "text": "How AgentEvals evaluates an agent trajectory",
+      "fontSize": 28,
+      "fontFamily": 1,
+      "strokeColor": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "rectangle",
+      "id": "actual-box",
+      "x": 40,
+      "y": 130,
+      "width": 250,
+      "height": 120,
+      "strokeColor": "#0078D4",
+      "backgroundColor": "#CFE4FA",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "actual-text",
+      "x": 65,
+      "y": 150,
+      "width": 200,
+      "height": 100,
+      "text": "Actual trajectory\nHumanMessage\nAIMessage + tool calls\nToolMessage results",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "rectangle",
+      "id": "reference-box",
+      "x": 40,
+      "y": 350,
+      "width": 250,
+      "height": 120,
+      "strokeColor": "#0078D4",
+      "backgroundColor": "#CFE4FA",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "reference-text",
+      "x": 65,
+      "y": 375,
+      "width": 200,
+      "height": 80,
+      "text": "Reference trajectory\nExpected tools\nExpected arguments\nExpected final answer",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "rectangle",
+      "id": "match-box",
+      "x": 410,
+      "y": 115,
+      "width": 310,
+      "height": 145,
+      "strokeColor": "#107C10",
+      "backgroundColor": "#DFF6DD",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "match-text",
+      "x": 445,
+      "y": 140,
+      "width": 240,
+      "height": 100,
+      "text": "Deterministic matcher\n\nStrict trajectory order\nExact tool arguments\nFast boolean result",
+      "fontSize": 17,
+      "fontFamily": 1,
+      "strokeColor": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "rectangle",
+      "id": "judge-box",
+      "x": 410,
+      "y": 335,
+      "width": 310,
+      "height": 165,
+      "strokeColor": "#5C2D91",
+      "backgroundColor": "#E8DAEF",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "judge-text",
+      "x": 445,
+      "y": 355,
+      "width": 240,
+      "height": 130,
+      "text": "Gemini trajectory judges\n\nTool selection\nTrajectory accuracy\nIntent resolution\nTask adherence",
+      "fontSize": 17,
+      "fontFamily": 1,
+      "strokeColor": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "rectangle",
+      "id": "results-box",
+      "x": 830,
+      "y": 190,
+      "width": 270,
+      "height": 145,
+      "strokeColor": "#F7630C",
+      "backgroundColor": "#FFF4CE",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "results-text",
+      "x": 865,
+      "y": 215,
+      "width": 200,
+      "height": 100,
+      "text": "Evaluation results\n\nBoolean exact match\nContinuous 0-1 scores\nReasoning comments",
+      "fontSize": 17,
+      "fontFamily": 1,
+      "strokeColor": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "rectangle",
+      "id": "langsmith-box",
+      "x": 830,
+      "y": 420,
+      "width": 270,
+      "height": 120,
+      "strokeColor": "#0C8599",
+      "backgroundColor": "#99E9F2",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "langsmith-text",
+      "x": 865,
+      "y": 445,
+      "width": 200,
+      "height": 80,
+      "text": "LangSmith feedback\n\nCompare experiments\nFind regressions",
+      "fontSize": 17,
+      "fontFamily": 1,
+      "strokeColor": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "arrow",
+      "id": "actual-match-arrow",
+      "x": 290,
+      "y": 185,
+      "width": 120,
+      "height": 0,
+      "strokeColor": "#495057",
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "arrow",
+      "id": "actual-judge-arrow",
+      "x": 290,
+      "y": 210,
+      "width": 120,
+      "height": 180,
+      "strokeColor": "#495057",
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          180
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "arrow",
+      "id": "reference-match-arrow",
+      "x": 290,
+      "y": 390,
+      "width": 120,
+      "height": -180,
+      "strokeColor": "#495057",
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          -180
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "arrow",
+      "id": "reference-judge-arrow",
+      "x": 290,
+      "y": 415,
+      "width": 120,
+      "height": 0,
+      "strokeColor": "#495057",
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "arrow",
+      "id": "match-results-arrow",
+      "x": 720,
+      "y": 190,
+      "width": 110,
+      "height": 55,
+      "strokeColor": "#495057",
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          55
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "arrow",
+      "id": "judge-results-arrow",
+      "x": 720,
+      "y": 410,
+      "width": 110,
+      "height": -105,
+      "strokeColor": "#495057",
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          -105
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "arrow",
+      "id": "results-langsmith-arrow",
+      "x": 965,
+      "y": 335,
+      "width": 0,
+      "height": 85,
+      "strokeColor": "#495057",
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          85
+        ]
+      ],
+      "endArrowhead": "arrow"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}
