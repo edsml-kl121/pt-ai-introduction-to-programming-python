@@ -4,6 +4,10 @@ myenv
 DS_Store
 **/__pycache__
 **/venv
+**/.venv
+**/.pytest_cache
+**/.streamlit
+**/*.pyc
 05_LLM_EVALUATION_AND_OBSERVABILITY/**/*.html
 05_LLM_EVALUATION_AND_OBSERVABILITY/**/*.json
 05_LLM_EVALUATION_AND_OBSERVABILITY/**/*.csv

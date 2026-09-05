@@ -17,8 +17,12 @@ etc), Git, Command Line interface
 **Session 5**: LLM evaluation and observability with LangChain and LangSmith.
 
 **Session 6 (TBC)**: AI/ML crash course and scope on the interested use case e.g. Forecasting, anomaly
-detection, image recognition, etc.
+detection, image recognition, etc. The focused
+[`06_AGENT_HARNESS`](./06_AGENT_HARNESS) exercise builds a small coding-agent
+interface with LangChain Deep Agents and Streamlit.
 
-**Session 7 (TBC)**: Engineering & Operations topics e.g. CI/CD pipelines, ML Pipeline with vertex AI, Integration with Line (Optional)
+**Session 7 (TBC)**: Engineering & Operations topics e.g. CI/CD pipelines, ML Pipeline with vertex AI, Integration with Line (Optional).
+The focused [`07_CI_CD`](./07_CI_CD) exercise tests, containerizes, and deploys
+an LLM-backed API to development and production Cloud Run services.
 
 **Session 8**: Basics of Data analysis, Introduction to BigquerySQL (Cloud Data Warehousing), Big Data processing e.g. spark. Using Cloud Services.
